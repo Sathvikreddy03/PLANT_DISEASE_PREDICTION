@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Identification</title>
+    <style>
+        body {
+            background-image: url('assets/backgorund.jpg'); /* Update with the correct URL */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 600px; /* Adjusted max width for better layout */
+            margin: 20px;
+            padding: 40px; /* Adjusted padding */
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            text-align: center; /* Center-align contents */
+        }
+        h1 {
+            color: #1b8080;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        #image-upload {
+            display: block;
+            margin: 20px auto;
+            padding: 10px; /* Add padding to make the file input larger */
+            font-size: 16px; /* Adjust font size */
+        }
+        #predict-button {
+            display: block;
+            margin: 20px auto;
+            background-color: #0074D9;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+        #predict-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Identification of Plant Disease</h1>
+        <form id="upload-form" method="POST" enctype="multipart/form-data" action="/upload">
+            <input type="file" id="image-upload" name="image" accept="image/*">
+            <button type="submit" id="predict-button">Predict</button>
+        </form>
+    </div>
+</body>
+</html>

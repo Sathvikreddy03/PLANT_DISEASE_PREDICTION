@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            background-image: url("assets\backgorund.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            max-width: 600px; /* Adjusted max width for better layout */
+            margin: 20px;
+            padding: 40px; /* Adjusted padding */
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgb(0, 0, 0, 0.1); /* Soft shadow */
+            text-align: center; /* Center-align contents */
+        }
+        h1 {
+            color: #1b8080;
+            font-size: 24px;
+        }
+        #uploaded-image {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        #back-button {
+            display: block;
+            margin: 20px auto;
+            background-color: #0074D9;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+        }
+        #back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Result</h1>
+        <img id="uploaded-image" src="{{ url_for('uploaded_file', filename=filename) }}" alt="Uploaded Image">
+        <p>Predicted Class: {{ prediction }}</p>
+        <a id="back-button" href="/">Upload Another Image</a>
+    </div>
+</body>
+</html>

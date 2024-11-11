@@ -1,0 +1,17 @@
+Flask
+gevent
+gunicorn
+glob2
+h5py
+itsdangerous
+Jinja2
+keras
+Keras-Applications
+Keras-Preprocessing
+Theano
+tensorflow
+Werkzeug
+glob2
+future
+numpy
+jupyter
